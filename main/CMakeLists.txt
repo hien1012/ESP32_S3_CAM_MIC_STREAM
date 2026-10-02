@@ -1,0 +1,21 @@
+idf_component_register(
+    SRCS
+        "app_main.c"
+        "wifi_manager.c"
+        "device_identity.c"
+        "cam_record.c"
+        "audio_record.c"
+        "ws_client.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        esp_wifi
+        nvs_flash
+        esp_netif
+        esp_event
+        esp_timer
+        driver
+        freertos
+        esp_websocket_client
+        #esp_camera
+        log
+)

@@ -1,0 +1,23 @@
+menu "ESP32-S3 CAM+MIC Streaming Node"
+
+    config FIELD_WIFI_SSID
+        string "WiFi SSID"
+        default "MySSID"
+        help
+            WiFi network name (SSID) to connect to.
+
+    config FIELD_WIFI_PASSWORD
+        string "WiFi Password"
+        default ""
+        help
+            WiFi password. Leave empty for open networks.
+
+    config FIELD_SERVER_IP
+        string "PC Server IP Address"
+        default "192.168.1.100"
+        help
+            IP address of the PC running the FastAPI streaming server.
+            Must be on the same LAN as the ESP32-S3.
+            The server listens on port 8765.
+
+endmenu
